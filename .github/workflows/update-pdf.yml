@@ -18,7 +18,7 @@ jobs:
 
       - name: Download latest PDF
         run: |
-          curl -L "https://www.overleaf.com/download/project/6a0366defdc17ed26a499c69/build/19e278c8cf1-03103b8aa6abbf36/output/output.pdf?compileGroup=standard&clsiserverid=clsi-pre-emp-c3d-d-f-kftm&enable_pdf_caching=true&popupDownload=true&editorId=0e402836-b0fa-435a-ab92-06143ddd2f96" -o AP2026.pdf
+          curl -L "https://www.overleaf.com/read/wmcrnrvpfdvf#45b041" -o AP2026.pdf
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
