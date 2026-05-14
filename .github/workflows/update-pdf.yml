@@ -18,7 +18,9 @@ jobs:
 
       - name: Download latest PDF
         run: |
-          curl -L "https://www.overleaf.com/read/wmcrnrvpfdvf#45b041" -o AP2026.pdf
+          curl -L "https://www.overleaf.com/download/project/wmcrnrvpfdvf/output/output.pdf" -o AB2026.pdf
+          file main.pdf
+          test "$(head -c 5 main.pdf)" = "%PDF-"
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
