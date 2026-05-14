@@ -5,6 +5,9 @@ on:
     - cron: "1 0 * * *"
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   fetch:
     runs-on: ubuntu-latest
@@ -15,7 +18,7 @@ jobs:
 
       - name: Download latest PDF
         run: |
-          curl -L "https://www.overleaf.com/project/wmcrnrvpfdvf#45b041/output.pdf" -o main.pdf
+          curl -L "https://www.overleaf.com/project/wmcrnrvpfdvf/output.pdf" -o main.pdf
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
